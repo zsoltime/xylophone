@@ -43,6 +43,8 @@ function Game() {
     if (state === 'recording') {
       sequence.record(note, timer.current());
     }
+    dom.sounds[note].pause();
+    dom.sounds[note].currentTime = 0;
     dom.sounds[note].play();
   }
   function record() {
