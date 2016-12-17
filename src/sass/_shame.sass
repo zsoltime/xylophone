@@ -3,7 +3,7 @@ body
   display: flex
   flex-direction: column
   height: 100%
-  justify-content: center
+  justify-content: space-around
   overflow: hidden
 
 h1
@@ -13,43 +13,70 @@ h1
   align-items: center
   display: flex
   justify-content: space-around
-  width: 75vw
+  width: 80vw
 
   div
     align-items: center
-    background: color(red)
+    background: color(pink)
     border-radius: 4px
-    color: rgba(black, .7)
+    box-shadow: 0 0 10px rgba(black, .1)
+    color: rgba(black, .5)
     cursor: pointer
     display: flex
     justify-content: space-around
-    height: 30vh
-    width: 8vw
+    height: 16vh
+    position: relative
+    width: 10%
+
+    &:after,
+    &:before
+      background-color: rgba(black, .5)
+      background-image: radial-gradient(ellipse closest-side, rgba(white, .3) 0, rgba(black, .1) 100%)
+      border-radius: 50%
+      box-shadow: 1px 1px 2px rgba(black, .2)
+      content: ' '
+      height: 2vmin
+      left: calc(50% - 1vmin)
+      position: absolute
+      top: 3vmin
+      width: 2vmin
+
+    &:after
+      bottom: 3vmin
+      top: auto
 
     &:nth-child(1)
       background: color(red)
-      height: 16vh
+      height: 30vh
 
     &:nth-child(2)
       background: color(orange)
-      height: 18vh
+      height: 28vh
 
     &:nth-child(3)
       background: color(yellow)
-      height: 20vh
+      height: 26vh
 
     &:nth-child(4)
       background: color(teal)
-      height: 22vh
+      height: 24vh
 
     &:nth-child(5)
       background: color(lightblue)
-      height: 24vh
+      height: 22vh
 
     &:nth-child(6)
       background: color(indigo)
-      height: 26vh
+      height: 20vh
 
     &:nth-child(7)
       background: color(purple)
-      height: 28vh
+      height: 18vh
+
+button
+  background: color(teal)
+  border: 1px solid rgba(white, .3)
+  color: rgba(white, .75)
+  cursor: pointer
+  font-weight: $font-weight
+  padding: .5em 1.25em
