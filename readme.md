@@ -7,3 +7,5 @@ Xylophone, using vanilla JS.
 - [ ]
 
 ## Next Steps
+
+It would be great to save the sequences to a database.
