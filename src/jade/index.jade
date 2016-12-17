@@ -4,20 +4,24 @@ block title
 block content
   h1 Day 14 - Xylophone
   .game#game
-    .do Do
-    .re Re
-    .mi Mi
-    .fa Fa
-    .sol Sol
-    .la La
-    .ti Ti
-    .do Do
+    .do(data-key='c') Do
+    .re(data-key='d') Re
+    .mi(data-key='e') Mi
+    .fa(data-key='f') Fa
+    .sol(data-key='g') Sol
+    .la(data-key='a') La
+    .ti(data-key='b') Ti
+    .do(data-key='cc') Do
+  .buttons
+    button.record#record REC
+    button.play#play PLAY
+    button.stop#stop STOP
   .notes
-    audio(src='//goo.gl/T1rxRG')
-    audio(src='//goo.gl/KT8FN3')
-    audio(src='//goo.gl/1SfsNS')
-    audio(src='//goo.gl/OsOCXe')
-    audio(src='//goo.gl/vukZmv')
-    audio(src='//goo.gl/Bjd9KT')
-    audio(src='//goo.gl/MS9HTp')
-    audio(src='//goo.gl/ANMMwn')
+    audio#c(data-key='c', src='//goo.gl/T1rxRG')
+    audio#d(data-key='d', src='//goo.gl/KT8FN3')
+    audio#e(data-key='e', src='//goo.gl/1SfsNS')
+    audio#f(data-key='f', src='//goo.gl/OsOCXe')
+    audio#g(data-key='g', src='//goo.gl/vukZmv')
+    audio#a(data-key='a', src='//goo.gl/Bjd9KT')
+    audio#b(data-key='b', src='//goo.gl/MS9HTp')
+    audio#cc(data-key='cc', src='//goo.gl/ANMMwn')
